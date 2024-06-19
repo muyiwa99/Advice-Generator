@@ -17,3 +17,6 @@
 .vscode
 design
 .gitignore
+style-guide
+_config
+main.css.map

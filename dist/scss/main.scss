@@ -1,0 +1,57 @@
+@import "config";
+body {
+  background-color: $dark-blue;
+  color: $Light-cyan;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  z-index: -1;
+}
+
+.advice {
+  margin: 15rem auto;
+  width: 30%;
+  border: 1px solid $dark-grayish-blue;
+  border-radius: 8px;
+  height: auto;
+  padding: 30px 45px;
+  background-color: $dark-grayish-blue;
+
+  &-id {
+    margin-inline: 40%;
+    color: $neon-green;
+    font-size: 16px;
+
+    &_text {
+      font-size: 28px;
+      font-weight: 800;
+      margin: 2rem auto 2rem auto;
+    }
+  }
+
+  &-divider {
+    margin-inline: 3.8rem;
+    margin-bottom: -30px;
+  }
+
+  &-dice {
+    position: relative;
+    top: 65px;
+    z-index: 0;
+    border: 1px solid;
+    padding: 16px;
+    background-color: $neon-green;
+    margin-inline: 44%;
+    border-radius: 50%;
+    height: 2rem;
+    cursor: pointer;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+
+  a {
+    color: $Light-cyan;
+  }
+}

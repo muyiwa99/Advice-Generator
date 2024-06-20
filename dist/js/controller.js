@@ -1,3 +1,6 @@
+const parentElement = document.querySelector(".advice-id_text");
+const idNumber = document.querySelector(".advice-id");
+
 const getAdviceQuote = async function () {
   try {
     const quoteJson = await fetch(`https://api.adviceslip.com/advice`);
@@ -6,6 +9,11 @@ const getAdviceQuote = async function () {
 
     const id = quoteData.slip.id;
     const advice = quoteData.slip.advice;
+
+    if (parentElement) {
+      parentElement.textContent = advice;
+      idNumber.innerHTML = id;
+    }
 
     console.log(id);
     console.log(advice);
@@ -16,12 +24,8 @@ const getAdviceQuote = async function () {
 
 getAdviceQuote();
 
-const renderAdvice = function (id, advice) {
-  const parentElement = document.querySelector("advice-id_text");
-  const idNumber = document.querySelector(".advice-id");
+// const renderAdvice = function (id, advice) {
 
-  idNumber.innerHTML = id;
-  parentElement.innerHTML = advice;
-};
+// };
 
-renderAdvice();
+// renderAdvice();

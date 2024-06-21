@@ -7,7 +7,7 @@ body {
 }
 
 .advice {
-  margin: 15rem auto;
+  margin: 10% auto;
   width: 30%;
   border: 1px solid hsl(217, 19%, 24%);
   border-radius: 8px;
@@ -15,31 +15,39 @@ body {
   padding: 30px 45px;
   background-color: hsl(217, 19%, 24%);
 }
+.advice-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .advice-id {
-  margin-inline: 40%;
   color: hsl(150, 100%, 66%);
-  font-size: 16px;
+  font-size: 20px;
 }
 .advice-id_text {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 800;
   margin: 2rem auto 2rem auto;
   color: hsl(193, 38%, 86%);
+  text-align: center;
 }
-.advice-divider {
-  margin-inline: 3.8rem;
-  margin-bottom: -30px;
+.advice-icons {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-.advice-dice {
+.advice-icons .circle {
+  border: 1px solid white;
   position: relative;
-  top: 65px;
-  z-index: 0;
-  border: 1px solid;
-  padding: 16px;
-  background-color: hsl(150, 100%, 66%);
-  margin-inline: 44%;
   border-radius: 50%;
-  height: 2rem;
+  width: 10%;
+  padding: 10px;
+  top: 65px;
+  margin-inline: 42%;
+  background-color: hsl(150, 100%, 66%);
+}
+.advice-icons_dice {
+  width: 100%;
   cursor: pointer;
 }
 

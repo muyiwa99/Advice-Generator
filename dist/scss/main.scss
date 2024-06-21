@@ -8,7 +8,7 @@ body {
 }
 
 .advice {
-  margin: 15rem auto;
+  margin: 10% auto;
   width: 30%;
   border: 1px solid $dark-grayish-blue;
   border-radius: 8px;
@@ -16,36 +16,60 @@ body {
   padding: 30px 45px;
   background-color: $dark-grayish-blue;
 
+  &-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
   &-id {
-    margin-inline: 40%;
+    // margin-inline: 40%;
     color: $neon-green;
-    font-size: 16px;
+    font-size: 20px;
 
     &_text {
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 800;
       margin: 2rem auto 2rem auto;
       color: $Light-cyan;
+      text-align: center;
     }
   }
 
-  &-divider {
-    margin-inline: 3.8rem;
-    margin-bottom: -30px;
+
+  &-icons{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+
+    &_divider{
+      // margin-top: 10%;
+    }
+
+
+    .circle{
+      border: 1px solid white;
+      position: relative;
+      border-radius: 50%;
+      width: 10%;
+      padding: 10px;
+      top: 65px; 
+      margin-inline: 42%; 
+      background-color: $neon-green
+
+    }
+
+    &_dice{
+      width: 100%;
+      cursor: pointer;
+    }
+
+  
   }
 
-  &-dice {
-    position: relative;
-    top: 65px;
-    z-index: 0;
-    border: 1px solid;
-    padding: 16px;
-    background-color: $neon-green;
-    margin-inline: 44%;
-    border-radius: 50%;
-    height: 2rem;
-    cursor: pointer;
-  }
+  
 }
 
 .attribution {

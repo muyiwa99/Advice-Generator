@@ -1,3 +1,5 @@
+'use strict'
+
 const parentElement = document.querySelector(".advice-id_text");
 const idNumber = document.querySelector(".advice-id");
 
@@ -11,12 +13,14 @@ const getAdviceQuote = async function () {
     const advice = quoteData.slip.advice;
 
     if (parentElement) {
-      parentElement.textContent = advice;
-      idNumber.innerHTML = id;
+      parentElement.textContent = `"${advice}"`;
+      idNumber.innerHTML = `#${id}`;
     }
 
     console.log(id);
     console.log(advice);
+
+    console.log(advice.length)
   } catch (err) {
     console.log(err);
   }
@@ -24,6 +28,8 @@ const getAdviceQuote = async function () {
 
 getAdviceQuote();
 
+
+export default getAdviceQuote;
 // const renderAdvice = function (id, advice) {
 
 // };

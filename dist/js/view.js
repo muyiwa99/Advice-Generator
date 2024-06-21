@@ -1,1 +1,1 @@
-import { getAdviceQuote } from "./controller";
+import  getAdviceQuote  from "./controller";

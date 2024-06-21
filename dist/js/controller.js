@@ -1,37 +1,63 @@
-'use strict'
+"use strict";
 
 const parentElement = document.querySelector(".advice-id_text");
 const idNumber = document.querySelector(".advice-id");
+const button = document.querySelector(".circle");
 
 const getAdviceQuote = async function () {
   try {
     const quoteJson = await fetch(`https://api.adviceslip.com/advice`);
 
-    const quoteData = await quoteJson.json();
-
-    const id = quoteData.slip.id;
-    const advice = quoteData.slip.advice;
-
-    if (parentElement) {
-      parentElement.textContent = `"${advice}"`;
-      idNumber.innerHTML = `#${id}`;
+    if (!quoteJson.ok) {
+      throw new Error("Something went wrong, Try again");
     }
 
-    console.log(id);
-    console.log(advice);
+    const quoteData = await quoteJson.json();
 
-    console.log(advice.length)
+    return quoteData.slip;
   } catch (err) {
     console.log(err);
+    return null;
   }
 };
 
-getAdviceQuote();
+const renderQuote = function (slip) {
+  if (slip) {
+    const { id, advice } = slip;
 
+    if (parentElement && idNumber) {
+      parentElement.classList.remove("scale-in-center");
+      idNumber.classList.remove("scale-in-center");
 
-export default getAdviceQuote;
-// const renderAdvice = function (id, advice) {
+      // Trigger a reflow to restart the animation
+      void parentElement.offsetWidth;
+      void idNumber.offsetWidth;
 
-// };
+      // Update the content
+      parentElement.textContent = `"${advice}"`;
+      idNumber.textContent = `#${id}`;
 
-// renderAdvice();
+      // Use requestAnimationFrame to re-add the class after a frame
+      requestAnimationFrame(() => {
+        parentElement.classList.add("scale-in-center");
+        idNumber.classList.add("scale-in-center");
+      });
+    }
+  } else {
+    if (parentElement) {
+      parentElement.textContent = "Something went wrong, Try again ";
+    }
+  }
+};
+
+const getAndRender = async function () {
+  const slip = await getAdviceQuote();
+  renderQuote(slip);
+};
+
+button.addEventListener("click", async function (e) {
+  e.preventDefault();
+  await getAndRender();
+});
+
+getAndRender();

@@ -54,6 +54,11 @@ body {
       top: 65px;
       margin-inline: 42%;
       background-color: $neon-green;
+
+      &:hover {
+        -webkit-box-shadow: 1px 2px 29px 11px #52ffa8;
+        box-shadow: 1px 2px 29px 11px #52ffa8;
+      }
     }
 
     &_dice {
@@ -118,5 +123,19 @@ body {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+// Media query
+
+@media (min-width: 375px) and (max-width: 800px) {
+  .advice {
+    margin: 40% auto;
+    width: 80%;
+    padding: 10px 15px;
+
+    .circle {
+      top: 45px;
+    }
   }
 }

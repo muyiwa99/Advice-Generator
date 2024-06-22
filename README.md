@@ -16,8 +16,6 @@ This is a solution to the [Advice generator app challenge on Frontend Mentor](ht
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -30,85 +28,83 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./dist/images/Advice-gen%20screen.png)
+![](./dist/images/Advice-gen%20screen%202.png)
+![](./dist/images/Advice-gen%20screen%203.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [](https://github.com/muyiwa99/Advice-Generator)
+- Live Site URL: [](https://advicegenmuyiwa.netlify.app/)
 
 ## My process
+
+- Looking at the design images to best understand the best way to execute the challenge
+- Breaking the Project down into steps, writing up the HTML, then styling the page with SCSS, then implementing the functionality with JS
+- Conducting further research on ASYNC/AWAIT, API fetch requests and CSS Animations
+- Finishing off by making the app fully responsive.
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
+- SCSS custom properties
+- Flex box
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- JS- App functionality
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This project helped to gain a more improved understanding of how ASNYC/AWAIT works, how to fetch data from an API, convert that data from JSON, then destructuring the data to then render them onto the page. I was able to implement multiple functions which all had different task compared to on previous projects when my functions handled multiple tasks which the lead to bugs and making the code difficult to read and understand, this helped me understand the importance of using callbacks and how to implement them going forward.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+some code i'm proud of, the simplicity of the this project allowed me to add some extra bits to make the app stand out a little more. The block of code below (generated from animista) allowed me to add a cool animation effect to the 'advice' each time the button is 'clicked' by the user.
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.scale-in-center {
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035)
+    forwards;
+  animation: scale-in-center 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035) forwards;
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Going forward i want to develop more web app's that that utilize API requests as theres a lot that can be learnt from these types of challenges e.g. handling the request, handling the data, rendering the data, how the user input affects the data, error handling, event delegation and so much more.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- Animista (https://animista.net/): Used for the Animation effect of the 'Advice' quote.
+- (https://html-css-js.com/): Used for the box shadow effect on the hover of the dice button
+- MDN (https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous)- For general Qs (ASYNC/Await, JSON, Try/Catch etc )
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Frontend Mentor - [@Muyiwa00](https://www.frontendmentor.io/profile/muyiwa99)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+I want to thank the Web development community for the endless amount of resources shared online which helps and gives Developers like myself countless ways of implementing challenges like this which then helps with learning new web dev concepts.

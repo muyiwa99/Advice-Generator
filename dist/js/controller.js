@@ -4,6 +4,7 @@ const parentElement = document.querySelector(".advice-id_text");
 const idNumber = document.querySelector(".advice-id");
 const button = document.querySelector(".circle");
 
+// Creating fetch request
 const getAdviceQuote = async function () {
   try {
     const quoteJson = await fetch(`https://api.adviceslip.com/advice`);
@@ -21,6 +22,7 @@ const getAdviceQuote = async function () {
   }
 };
 
+// Redenring the ID and 'Advice' to the page
 const renderQuote = function (slip) {
   if (slip) {
     const { id, advice } = slip;
